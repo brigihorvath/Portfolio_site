@@ -1,0 +1,332 @@
+ 
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+
+
+
+.header {
+	text-align: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 1em;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(226,222,201,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(226,222,201,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(226,222,201,0.75);
+	background-color: white;
+	padding: 5px 25px;
+	max-height: 20vh;
+	justify-content: space-between;
+}
+
+.authorName {
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #f7e47b 86%, #ffe13e 100%);
+	font-family: 'Homemade Apple', cursive;
+	font-size: 1.2em;
+
+}
+
+
+.logo {
+	max-width: 6vw;
+}
+
+
+
+main {
+	background: url("/Users/Brigi_Air/Documents/FEND_2018/Modul1_HTML_CSS/Modul1_Portfolio_site/img/1105.svg") no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 50vh;
+	position: relative;
+	max-width: 1500px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(226,222,201,0.75);
+	-moz-box-shadow: 0px 0px 20px 0px rgba(226,222,201,0.75);
+	box-shadow: 0px 0px 20px 0px rgba(226,222,201,0.75);
+}
+
+.hero {
+	position: absolute;
+	background-color: white;
+	width: 90%;
+ 	height: 35%;
+	top: 50%;
+	left: 50%;
+  	transform: translate(-50%, -50%);
+  	-webkit-box-shadow: 0px 0px 20px 0px rgba(226,222,201,0.75);
+	-moz-box-shadow: 0px 0px 20px 0px rgba(226,222,201,0.75);
+	box-shadow: 0px 0px 20px 0px rgba(226,222,201,0.75);
+	
+}
+
+.placeholder{
+	width: 100%;
+}
+
+.heroText {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.heroTitle {
+	font-size: 1.2em;
+	padding-bottom: 20px;
+	border-bottom: 2px solid black;
+	white-space: nowrap;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+.year{
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.projectHeader{
+	border-bottom: 2px solid lightgrey;
+	padding: 10px;
+	max-width: 90%;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.projects{
+	display: flex;
+	max-width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+.singleProject{
+	width: 90%;
+	padding-top: 90%;
+	position: relative;
+	margin: 10px 3px;
+	transition: transform .2s;
+}
+
+
+
+
+.singleProject:hover {
+    -ms-transform: scale(0.95); /* IE 9 */
+    -webkit-transform: scale(0.95); /* Safari 3-8 */
+    transform: scale(0.95); 
+}
+
+/*.projectName {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    color: white;
+    
+}*/
+
+.projectImage{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.projectImageContainer{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+
+
+
+
+/*overlay on the pictures*/
+.projectImageContainer:after {
+    content: '\A';
+    position: absolute;
+    width: 100%; 
+    height:100%;
+    top:0; 
+    left:0;
+    background:rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    border-radius: 10px;
+
+}
+
+.projectImageContainer:hover:after {
+    opacity: 1;
+       
+}
+
+/*text on the pictures*/
+.projectImageContainer:before {
+    content: attr(data-content);
+    font-size: 1em;
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 2px 2px 2px darkgrey;
+}
+
+.projectImageContainer:hover:before {
+	text-shadow: none;
+	font-size: 1.5em;
+}
+
+
+.myStory {
+	text-align: center;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+
+footer 	{
+	margin: 0 auto;
+	max-width: 90%;
+	text-align: center;
+}
+
+.credits {
+	font-size: 0.75em;
+}
+
+
+
+@media screen and (min-width: 426px) {
+	.singleProject{
+	width: 45%;
+	padding-top: 45%;
+	}
+}
+
+@media screen and (min-width: 650px) {
+
+	
+  	.header{
+  		max-width: 100%;
+  		padding: 5px 40px;
+  	}
+
+  	.hero{
+  	width: 70%;
+	height: 50%;
+	outline: 2px solid black;
+    outline-offset: -10px;
+  	}
+
+	.logo{
+		max-width: 5vw;
+	}
+
+	.authorName{
+		font-size: 1.5em;
+	}
+
+  	.headerMainTitle{
+  		font-size: 1.7em;
+  	}
+
+  	.singleProject{
+	width: 30%;
+	padding-top: 30%;
+	}
+
+}
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+	.header{
+		flex-direction: row;
+		justify-content: space-between;
+		max-width: 1500px;
+		margin: 0 auto;
+		
+  }
+
+  .singleProject {
+	width: 20%;
+	padding-top: 20%;
+	}
+
+	.logo {
+	max-width: 3.5vw;
+}
+
+	.authorName{
+		font-size: 1.5em;
+	}
+
+
+
+	.hero {
+	  	width: 60%;
+		height: 60%;
+		outline: 2px solid black;
+	    outline-offset: -10px;
+	  	}
+	.heroTitle, .year {
+		font-size: 1.5em;
+	}
+
+	main{
+		height: 70vh;
+	}
+	 
+	
+}
+
+
+
+
+
+
+
