@@ -52,7 +52,7 @@ a{
 
 
 main {
-	background: url("/Users/Brigi_Air/Documents/FEND_2018/Modul1_HTML_CSS/Modul1_Portfolio_site/img/golden_background_vector.svg") no-repeat;
+	background: url("img/golden_background_vector.svg") no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	height: 50vh;
